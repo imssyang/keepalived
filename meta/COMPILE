@@ -1,0 +1,17 @@
+
+# 依赖库
+(old) apt install iptables-dev libipset-dev libnl-3-dev libnl-genl-3-dev libssl-dev
+(old) apt install libxtables-dev libip4tc-dev libip6tc-dev libipset-dev libnl-3-dev libnl-genl-3-dev libssl-dev
+
+# 配置
+./configure --prefix=/opt/keepalived \
+    --sbindir=/opt/keepalived/bin \
+    --sysconfdir=/opt/keepalived/conf \
+    --enable-regex \
+    --enable-regex-timers \
+    --enable-json \
+    CPPFLAGS="-I/opt/pcre2/include" \
+    LDFLAGS="-L/opt/pcre2/lib" \
+    LIBS="-lpcre2-8"
+
+
