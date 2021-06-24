@@ -11,5 +11,9 @@
 # --log-facility       -S    0-7 Set local syslog facility (default=LOG_DAEMON)
 #
 
-KEEPALIVED_OPTIONS="-D"
+KEEPALIVED_OPTIONS="-D \
+--pid=/opt/keepalived/run/keepalived.pid \
+--vrrp_pid=/opt/keepalived/run/vrrp.pid \
+--checkers_pid=/opt/keepalived/run/checkers.pid \
+"
 
