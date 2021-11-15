@@ -11,6 +11,8 @@ KillMode=process
 EnvironmentFile=-/opt/keepalived/conf/sysconfig/keepalived
 ExecStart=/opt/keepalived/bin/keepalived --dont-fork $KEEPALIVED_OPTIONS
 ExecReload=/bin/kill -HUP $MAINPID
+User=root
+Group=root
 
 [Install]
 WantedBy=multi-user.target
