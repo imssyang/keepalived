@@ -2,7 +2,6 @@
 
 global_defs {
    notification_email {
-     imssyang@gmail.com
      acassen@firewall.loc
      failover@firewall.loc
      sysadmin@firewall.loc
@@ -19,7 +18,7 @@ global_defs {
 
 vrrp_instance VI_1 {
     state MASTER
-    interface ens33
+    interface eth0
     virtual_router_id 51
     priority 100
     advert_int 1
